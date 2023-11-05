@@ -9,16 +9,16 @@ const players = {
 };
 
 const rankToImage = {
-    'none': 'images/none.png',
-    'IRON': 'images/iron.png',
-    'BRONZE': 'images/bronze.png',
-    'SILVER': 'images/silver.png',
-    'GOLD': 'images/gold.png',
-    'PLATINUM': 'images/platinum.png',
-    'DIAMOND': 'images/diamond.png',
-    'MASTER': 'images/master.png',
-    'GRANDMASTER': 'images/grandmaster.png',
-    'CHALLENGER': 'images/challenger.png'
+    'none': 'multirankchecker/images/none.png',
+    'IRON': 'multirankchecker/images/iron.png',
+    'BRONZE': 'multirankchecker/images/bronze.png',
+    'SILVER': 'multirankchecker/images/silver.png',
+    'GOLD': 'multirankchecker/images/gold.png',
+    'PLATINUM': 'multirankchecker/images/platinum.png',
+    'DIAMOND': 'multirankchecker/images/diamond.png',
+    'MASTER': 'multirankchecker/images/master.png',
+    'GRANDMASTER': 'multirankchecker/images/grandmaster.png',
+    'CHALLENGER': 'multirankchecker/images/challenger.png'
 };
 
 var currentPlayer = "none";
