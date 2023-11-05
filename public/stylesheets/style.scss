@@ -1,0 +1,168 @@
+@use "utils" as *;
+
+$color_type_0: rgb(255, 255, 255);
+$color_type_1: rgba(64, 64, 64, 0.603);
+
+$border_radius_type_0: 24px 24px 24px 24px;
+
+$font_type_0: 700 28px/1.21 "Montserrat", Helvetica, Arial, serif;
+$font_type_1: 700 18px/1.22 "Montserrat", Helvetica, Arial, serif;
+$font_type_2: 400 16px/1.25 "Montserrat", Helvetica, Arial, serif;
+
+.root {
+    @include flex-column;
+    background-color: $color_type_0;
+    position: relative;
+    overflow: hidden;
+    min-height: 1024px;
+}
+
+.flexRow {
+    @include mq-between(xxl, xxxl) {
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 0px;
+    }
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.flexRow>.cell {
+    @include flex-column;
+    position: relative;
+    flex: 0 1 527px;
+}
+
+.content_box {
+    @include flex-column;
+    background-color: $color_type_1;
+    border-radius: $border_radius_type_0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.247);
+    position: relative;
+    flex-grow: 1;
+}
+
+.title {
+    @include font-face($font_type_0, $color_type_0, 0px);
+    width: 94px;
+    position: relative;
+    flex-grow: 1;
+    min-width: 94px;
+    margin: 101px auto 497px;
+}
+
+.flexRow>.cell1 {
+    margin-left: -515px;
+    @include flex-column;
+    position: relative;
+    flex: 0 1 521px;
+}
+
+.flexCol {
+    @include flex-column;
+    position: relative;
+    flex-grow: 1;
+    margin: 23px 0px 425px;
+}
+
+.flexRow1 {
+    @include v-center-content;
+    position: relative;
+    margin: 0px 10px;
+}
+
+.flexRow1>.cell {
+    @include flex-column;
+    position: relative;
+    flex: 0 1 62px;
+}
+
+.icon {
+    width: 62px;
+    height: auto;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.247));
+    aspect-ratio: 1;
+    vertical-align: top;
+    object-fit: cover;
+    object-position: center center;
+    position: relative;
+    min-width: 62px;
+}
+
+.flexRow1>.spacer {
+    flex: 0 1 22px;
+}
+
+.flexRow2 {
+    @include v-center-content;
+    column-gap: 14px;
+    position: relative;
+    margin: 48px 0px 0px;
+}
+
+.flexRow2>.cell {
+    @include flex-column;
+    position: relative;
+    flex: 0 1 74px;
+}
+
+.icon1 {
+    width: 74px;
+    height: auto;
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.247));
+    aspect-ratio: 1;
+    vertical-align: top;
+    object-fit: cover;
+    object-position: center center;
+    position: relative;
+    min-width: 74px;
+}
+
+.flexRow3 {
+    @include v-center-content;
+    position: relative;
+    flex: 0 1 433px;
+    margin: 21px 0px 9px;
+}
+
+.flexCol1 {
+    @include flex-column;
+    position: relative;
+    flex: 0 1 163px;
+}
+
+.highlights {
+    @include font-face($font_type_1, $color_type_0, 0px);
+    position: relative;
+}
+
+.highlights1 {
+    @include font-face($font_type_2, $color_type_0, 0px);
+    position: relative;
+    margin: 2px 0px 0px;
+}
+
+.flexRow3>.spacer {
+    flex: 0 1 152px;
+}
+
+.flexCol2 {
+    @include flex-column;
+    position: relative;
+    flex: 0 1 118px;
+}
+
+.highlights11 {
+    @include font-face($font_type_2, $color_type_0, 0px);
+    position: relative;
+    margin: 0px 18px 0px 17px;
+}
+
+.highlights12 {
+    @include font-face($font_type_2, $color_type_0, 0px);
+    position: relative;
+    margin: 4px 0px 0px;
+}
