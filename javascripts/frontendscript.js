@@ -45,73 +45,37 @@ icon1.addEventListener('click', event => {
     getSummonerName('legends fate');
     currentPlayer = "kaige";
     clickDone = true;
-    // kaige.style.display = "block";
-    // elijah.style.display = "none";
-    // grady.style.display = "none";
-    // justin.style.display = "none";
-    // braydon.style.display = "none";
-    // ward.style.display = "none";
 })
 icon2.addEventListener('click', event => {
     getSummonerName('arielice04');
     currentPlayer = "elijah";
     clickDone = true;
-    // kaige.style.display = "none";
-    // elijah.style.display = "block";
-    // grady.style.display = "none";
-    // justin.style.display = "none";
-    // braydon.style.display = "none";
-    // ward.style.display = "none";
 })
 icon3.addEventListener('click', event => {
     getSummonerName('kahzix only');
     currentPlayer = "grady";
     clickDone = true;
-    // kaige.style.display = "none";
-    // elijah.style.display = "none";
-    // grady.style.display = "block";
-    // justin.style.display = "none";
-    // braydon.style.display = "none";
-    // ward.style.display = "none";
+
 })
 icon4.addEventListener('click', event => {
     getSummonerName('flowgames');
     currentPlayer = "justin";
     clickDone = true;
-    // kaige.style.display = "none";
-    // elijah.style.display = "none";
-    // grady.style.display = "none";
-    // justin.style.display = "block";
-    // braydon.style.display = "none";
-    // ward.style.display = "none";
 })
 icon5.addEventListener('click', event => {
     getSummonerName('madmusicmania');
     currentPlayer = "braydon";
     clickDone = true;
-    // kaige.style.display = "none";
-    // elijah.style.display = "none";
-    // grady.style.display = "none";
-    // justin.style.display = "none";
-    // braydon.style.display = "block";
-    // ward.style.display = "none";
+
 })
 icon6.addEventListener('click', event => {
     getSummonerName('BeastBear');
     currentPlayer = "ward";
     clickDone = true;
-    // kaige.style.display = "none";
-    // elijah.style.display = "none";
-    // grady.style.display = "none";
-    // justin.style.display = "none";
-    // braydon.style.display = "none";
-    // ward.style.display = "block";
 })
 
 let encryptedId = null; // Declare and initialize encryptedId
 async function getSummonerName(summonerName) {
-
-
     try {
         
         const response = await fetch(`https://ancient-retreat-03447-bf8619e939a3.herokuapp.com/api/getSummonerId/${summonerName}`);
