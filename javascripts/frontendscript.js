@@ -45,36 +45,43 @@ icon1.addEventListener('click', event => {
     getSummonerName('legends fate');
     currentPlayer = "kaige";
     clickDone = true;
+    GetRLRank('Nenariko');
 })
 icon2.addEventListener('click', event => {
     getSummonerName('arielice04');
     currentPlayer = "elijah";
     clickDone = true;
+    GetRLRank('ArielIce04');
 })
 icon3.addEventListener('click', event => {
     getSummonerName('kahzix only');
     currentPlayer = "grady";
     clickDone = true;
-
+    GetRLRank('OverW4tchTracer');
 })
 icon4.addEventListener('click', event => {
     getSummonerName('flowgames');
     currentPlayer = "justin";
     clickDone = true;
+    GetRLRank('Flow.games');
 })
 icon5.addEventListener('click', event => {
     getSummonerName('madmusicmania');
     currentPlayer = "braydon";
     clickDone = true;
+    GetRLRank('Madmusicmania');
 
 })
 icon6.addEventListener('click', event => {
     getSummonerName('BeastBear');
     currentPlayer = "ward";
     clickDone = true;
+    GetRLRank('');
 })
 
 let encryptedId = null; // Declare and initialize encryptedId
+
+
 async function getSummonerName(summonerName) {
     try {
         
@@ -125,6 +132,16 @@ async function getSummonerRank(encryptedId) {
     }
 }
 
+async function GetRLRank(RLName) {
+    try{
+        const response = await fetch('https://ancient-retreat-03447-bf8619e939a3.herokuapp.com/api/GetRLRank/${RLName}');
+        const dataForRankRL = await response.json();
+        console.log(dataForRankRL.ranks[1]);
+        const RLRank = (dataForRankRL.ranks[1]);
+    } catch (error){
+        console.error('Error fetching RL Rank', error);
+    }
+}
 
 
 
