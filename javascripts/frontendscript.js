@@ -139,7 +139,7 @@ async function getRocketRank(RLUserName){
         const response = await fetch(`https://ancient-retreat-03447-bf8619e939a3.herokuapp.com/api/getRocketRank/${RLUserName}`);
         const rankData = await response.json();
         if(rankData[0]){
-            console.log(rankData[0]);
+            console.log(rankData.get2v2());
         }
     } catch (e) {
         console.log(e)
