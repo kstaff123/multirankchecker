@@ -1,4 +1,3 @@
-app.use(cors());
 
 const players = {
     kaige: { name: 'legends fate', rank: '', tier: '' },
