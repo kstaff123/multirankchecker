@@ -1,3 +1,4 @@
+const { RLAPI, PLATFORM } = require('./index')
 
 const players = {
     kaige: { name: 'legends fate', rank: '', tier: '' },
@@ -132,7 +133,7 @@ async function getSummonerRank(encryptedId) {
     }
 }
 
-const {RLAPI, PLATFORM} = require('rocketleague.js')
+
 
 async function getRocketRank(RLUserName){
     try {
