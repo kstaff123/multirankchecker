@@ -134,7 +134,7 @@ async function getSummonerRank(encryptedId) {
 
 async function GetRLRank(RLName) {
     try{
-        const response = await fetch(`https://ancient-retreat-03447-bf8619e939a3.herokuapp.com/api/GetRLRank/${RLName}`);
+        const response = await fetch(`https://ancient-retreat-03447-bf8619e939a3.herokuapp.com/api/ranks/${RLName}`);
         const dataForRankRL = await response.json();
         console.log(dataForRankRL.ranks[1]);
         const RLRank = (dataForRankRL.ranks[1]);
