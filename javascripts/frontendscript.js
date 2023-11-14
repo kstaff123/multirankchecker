@@ -45,38 +45,38 @@ icon1.addEventListener('click', event => {
     getSummonerName('legends fate');
     currentPlayer = "kaige";
     clickDone = true;
-    GetRLRank('Nenariko');
+    getRocketRank('Nenariko');
 })
 icon2.addEventListener('click', event => {
     getSummonerName('arielice04');
     currentPlayer = "elijah";
     clickDone = true;
-    GetRLRank('ArielIce04');
+    getRocketRank('ArielIce04');
 })
 icon3.addEventListener('click', event => {
     getSummonerName('kahzix only');
     currentPlayer = "grady";
     clickDone = true;
-    GetRLRank('OverW4tchTracer');
+    getRocketRank('OverW4tchTracer');
 })
 icon4.addEventListener('click', event => {
     getSummonerName('flowgames');
     currentPlayer = "justin";
     clickDone = true;
-    GetRLRank('Flow.games');
+    getRocketRank('Flow.games');
 })
 icon5.addEventListener('click', event => {
     getSummonerName('madmusicmania');
     currentPlayer = "braydon";
     clickDone = true;
-    GetRLRank('Madmusicmania');
+    getRocketRank('Madmusicmania');
 
 })
 icon6.addEventListener('click', event => {
     getSummonerName('BeastBear');
     currentPlayer = "ward";
     clickDone = true;
-    GetRLRank('');
+    getRocketRank('');
 })
 
 let encryptedId = null; // Declare and initialize encryptedId
@@ -132,6 +132,22 @@ async function getSummonerRank(encryptedId) {
     }
 }
 
+const {RLAPI, PLATFORM} = require('rocketleague.js')
+
+async function getRocketRank(RLUserName){
+    try {
+        
+        const user = await RLAPI.fetchUser(PLATFORM.Epic, (RLUserName))
+        console.log('2v2: ', user.get2v2())
+    } catch (e) {
+        console.log(e)
+        /* Error: We could not find the player [player]. */
+    }
+}
+
+
+// ROCKET LEAGUE
+/*
 async function GetRLRank(RLName) {
     try{
         const response = await fetch(`https://ancient-retreat-03447-bf8619e939a3.herokuapp.com/api/ranks/${RLName}`);
@@ -142,7 +158,7 @@ async function GetRLRank(RLName) {
         console.error('Error fetching RL Rank', error);
     }
 }
-
+*/
 
 
 
