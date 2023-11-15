@@ -137,7 +137,7 @@ async function getSummonerRank(encryptedId) {
 async function getRocketRank(RLUserName){
     try {
         const response = await fetch(`https://ancient-retreat-03447-bf8619e939a3.herokuapp.com/api/getRocketRank/${RLUserName}`);
-        const rankData = await response.json();
+        const rankData = await response.html();
         if(rankData[0]){
             console.log(rankData.get2v2());
         }
